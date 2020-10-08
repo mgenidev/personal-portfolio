@@ -15,6 +15,43 @@ The site can be navigated using the following pages:
  Downloads
 ```
 
+```
+<nav class="navbar navbar-expand-lg custom-navbar nav-fill rounded shadow-lg custom-navbar-bg">
+
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="education.html">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="work.html">Work</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="downloads.html">Downloads</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+```
+
 In addition, the page called *PortFolio* has a heading labelled **Projects Gallery** solely dedicated to screenshots of complete projects with a link icon below the image which directs the viewer to that particular site. Here the user can showcase their abilities and capabilities with regards to their respective line of work.
 
 ## UX
@@ -43,6 +80,28 @@ Fonts:
     - Josefin Sans
     - Jost
     - Old Standard TT
+```
+
+```
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&family=Old+Standard+TT&display=swap');
+
+/* Heading styles */
+    
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Paragraphs and anchor styles */
+
+p {
+    font-family: 'Jost', sans-serif;
+}
+
+a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+}
 ```
 
 #### General Page Layout
@@ -307,6 +366,71 @@ Each page is divided into four parts:
 
 Feature 1 (Carousel) &mdash; *allows the user to add their own images. In addition captions can also be included alongside the images.*
 
+```
+<aside>
+    <div id="carouselExampleCaptions"
+        class="carousel slide carousel-fade shadow-lg rounded-lg" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/homepage-carousel/welcome-carousel-img-1.svg"
+                    class="d-block w-100 rounded-lg shadow-lg" alt="Placeholder Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/homepage-carousel/welcome-carousel-img-2.svg"
+                    class="d-block w-100 rounded-lg shadow-lg" alt="Placeholder Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/homepage-carousel/welcome-carousel-img-3.svg"
+                    class="d-block w-100 rounded-lg shadow-lg" alt="Placeholder Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/homepage-carousel/welcome-carousel-img-4.svg"
+                    class="d-block w-100 rounded-lg shadow-lg" alt="Placeholder Slide 4">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fourth slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/homepage-carousel/welcome-carousel-img-5.svg"
+                    class="d-block w-100 rounded-lg shadow-lg" alt="Placeholder Slide 5">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fifth slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</aside>
+```
+
 #### About Page
 
 Feature 2 (Personal Info) &mdash; *allows the user to add their own personal info such as:*
@@ -321,10 +445,37 @@ Feature 2 (Personal Info) &mdash; *allows the user to add their own personal inf
      someone@example.com  
 ```
 
+```
+<section class="text-center p-2">
+    <h3>Personal Info</h3>
+    <p><strong>Date Of Birth:</strong><br>
+        Day | Month | Year</p>
+    <p><strong>Address:</strong><br>
+        P.O. Box 12345 - Location</p>
+    <p><strong>Mobile Number:</strong><br>
+        0712 345 678</p>
+    <p><strong>Email:</strong><br>
+        someone@example.com</p>
+</section>
+```
+
 Feature 3 (Profile Pic) &mdash; *allows the user to add their own Profile Picture as per the template provided:*
 ```
      Your Names
      Your Current Position
+```
+
+```
+<section class="text-center p-2">
+    <figure class="figure">
+        <img src="./images/profile-pic/img-profile-pic.svg"
+            class="figure-img img-fluid rounded p-2" alt="Site owner profile picture">
+            <figcaption class="text-center p-2">
+                <h2>Your Names</h2>
+                <h3><em>Your Current Position</em></h3>
+            </figcaption> 
+    </figure>
+</section>
 ```
 
 Feature 4 (Professional and Personal Accomplishments) &mdash; *allows the user to add their own Accomplishments as per the template provided.*
@@ -334,6 +485,16 @@ Feature 4 (Professional and Personal Accomplishments) &mdash; *allows the user t
      Accomplishment
 ```
 
+```
+<section class="text-center p-2">
+    <blockquote>
+        <h3>Professional and personal accomplishments</h3>
+        <p>Professional and personal capacity</p>
+        <footer><cite>Accomplishment</cite></footer>
+    </blockquote>
+</section>
+```
+
 Feature 5 (What are you looking for right now?) &mdash; *allows the user to add what they are looking for:*
 ```
  What are you looking for right now?
@@ -341,12 +502,34 @@ Feature 5 (What are you looking for right now?) &mdash; *allows the user to add 
      Choice
 ```
 
+```
+<section class="text-center p-2">
+    <blockquote>
+        <h3>What are you looking for right now?</h3>
+        <p>Job, career change, collaboration, partnership</p>
+        <footer><cite>Choice</cite></footer>
+    </blockquote>
+</section>
+```
+
+
 Feature 6 (Why you should hire me!) &mdash; *allows the user to pitch for themselves why they should be hired:*
 ```
  Why you should hire me!
       Tell me about your portfolio
       Credentials
 ```
+
+```
+<section class="text-center p-2">
+    <blockquote>
+        <h3>Why you should hire me!</h3>
+        <p>Tell me about your portfolio</p>
+        <footer><cite>Credentials</cite></footer>
+    </blockquote>
+</section>
+```
+
 
 #### Education Page
 
@@ -360,6 +543,34 @@ Feature 7 (Accordion Collapse University Education History) &mdash; *allows the 
       Location, Country
 ```
 
+```
+<div class="card" style="background: navajowhite;">
+    <div class="card-header" id="headingUniOne">
+        <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button"
+                data-toggle="collapse" 
+                data-target="#collapseUniOne"
+                aria-expanded="true"
+                aria-controls="collapseUniOne">
+                1<sup>st</sup> University
+            </button>
+        </h2>
+    </div>
+    <div id="collapseUniOne" class="collapse show"
+        aria-labelledby="headingUniOne"
+        data-parent="#accordionUni">
+        <div class="card-body">
+            <p><strong>Month/Year of Start - Month/Year of End</strong></p>
+            <p><strong>Course Name</strong></p>
+            <p><strong>University Name</strong></p>
+            <p><strong>P.O. Box:</strong> 123 45</p>
+            <p><strong>Location, Country</strong></p>
+        </div>
+    </div>
+</div>
+```
+
+
 Feature 8 (Accordion Collapse High School Education History) &mdash; *allows the user to enter their studies details:*
 ```
  High School:
@@ -368,6 +579,31 @@ Feature 8 (Accordion Collapse High School Education History) &mdash; *allows the
       High School Name
       P.O. Box: 123 45
       Location, Country
+```
+
+```
+<div class="card" style="background: navajowhite;">
+    <div class="card-header" id="headingHsOne">
+        <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button"
+                data-toggle="collapse" 
+                data-target="#collapseHsOne" aria-expanded="true"
+                aria-controls="collapseHsOne">
+                1<sup>st</sup> High School
+            </button>
+        </h2>
+    </div>
+    <div id="collapseHsOne" class="collapse show" aria-labelledby="headingHsOne"
+        data-parent="#accordionHs">
+        <div class="card-body">
+            <p><strong>Month/Year of Start - Month/Year of End</strong></p>
+            <p><strong>Course Name</strong></p>
+            <p><strong>High School Name</strong></p>
+            <p><strong>P.O. Box:</strong> 123 45</p>
+            <p><strong>Location, Country</strong></p>
+        </div>
+    </div>
+</div>
 ```
 
 Feature 9 (Accordion Collapse Primary School Education History) &mdash; *allows the user to enter their studies details:*
@@ -380,6 +616,31 @@ Feature 9 (Accordion Collapse Primary School Education History) &mdash; *allows 
       Location, Country
 ```
 
+```
+<div class="card" style="background: navajowhite;">
+    <div class="card-header" id="headingPsOne">
+        <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button"
+                data-toggle="collapse" data-target="#collapsePsOne" aria-expanded="true"
+                aria-controls="collapsePsOne">
+                1<sup>st</sup> Primary School
+            </button>
+        </h2>
+    </div>
+    <div id="collapsePsOne" class="collapse show" aria-labelledby="headingPsOne"
+        data-parent="#accordionPs">
+        <div class="card-body">
+            <p><strong>Month/Year of Start - Month/Year of End</strong></p>
+            <p><strong>Course Name</strong></p>
+            <p><strong>Primary School Name</strong></p>
+            <p><strong>P.O. Box:</strong> 123 45</p>
+            <p><strong>Location, Country</strong></p>
+        </div>
+    </div>
+</div>
+```
+
+
 #### Work Page
 
 Feature 10 (Timeline for Work Experience) &mdash; *allows the user to enter their work details:*
@@ -389,6 +650,37 @@ Feature 10 (Timeline for Work Experience) &mdash; *allows the user to enter thei
       Description
       Location, Country
       Year of Start - Year of End
+```
+
+```
+<li>
+    <div class="timeline-content rounded-lg shadow-lg">
+        <div class="timeline-content-heading">
+            <h3>Job Title</h3>
+        </div>
+        <div class="timeline-content-subheading font-italic">
+            <h4>Company Name</h4>
+        </div>
+        <div class="timeline-content-body">
+            <p class="pb-3">
+                <strong>Description:</strong> Lorem ipsum dolor sit amet consectetur
+                adipisicing elit.
+                Tempore et alias ipsam temporibus, qui laudantium,
+                mollitia id quibusdam eum accusamus eius? Iste dolorem nihil eaque,
+                voluptatem beatae ducimus! Minus non sapiente blanditiis modi
+                consequuntur,
+                tempore delectus atque. Ipsam eos quibusdam reiciendis a molestias,
+                fuga facilis quos, minus sint, et cum.
+            </p>
+            <div class="timeline-content-body-subheading font-italic">
+                <h5 class="font-italic location m-0 pb-2">Location, Country</h5>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-time">
+        <h6>2019 &mdash; 2020</h6>
+    </div>
+</li>
 ```
 
 #### PortFolio Page
@@ -401,6 +693,22 @@ Feature 11 (Projects Gallery) &mdash; *allows the user to add screenshots of the
       figcaption:
          Chain Link icon
  ```
+
+ ```
+<section class="text-center p-2">
+    <h3>Project 1</h3>
+    <figure class="figure">
+        <img class="figure-img img-fluid rounded shadow-lg project-1"
+            src="./images/projects-gallery/img-project-1.svg" alt="project-1-screenshot">
+        <figcaption><em>Link</em>
+            <a href="#" target="_blank">
+                <i class="fa fa-2x fa-link" aria-hidden="true" style="color: #F40F02;"></i>
+            </a>
+        </figcaption>
+    </figure>
+</section>
+```
+
 
 #### Contacts Page
 
@@ -415,6 +723,18 @@ Feature 12 (Contact Details) &mdash; *allows the user to enter their contact det
  Address:
      P.O. Box 12345 - Location
 ```
+
+```
+<section class="text-center p-2">
+    <h3>Email:</h3>
+    <p>someone@example.com</p>
+    <h4>Mobile Number:</h4>
+    <p>0712 345 678</p>
+    <h4>Address:</h4>
+    <p>P.O. Box 12345 - Location</p>
+</section>
+```
+
 
 #### Downloads Page
 
@@ -432,6 +752,47 @@ Feature 13 (Downloads) &mdash; *allows the user to link the following documents:
  References
      PDF Icon
 ```
+
+```
+<article>
+    <h2 class="text-center" style="font-weight: 600;">Downloads</h2>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+            <section class="text-center p-2">
+                <h3>Curriculum Vitae</h3><br>
+                    <a href="pdf/curriculum-vitae.pdf" target="_blank">
+                        <i class="fa fa-4x fa-file-pdf-o" aria-hidden="true" style="color: #F40F02;"></i>
+                    </a>
+            </section>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+            <section class="text-center p-2">
+                <h3>Cover Letter</h3><br>
+                    <a href="pdf/cover-letter.pdf" target="_blank">
+                        <i class="fa fa-4x fa-file-pdf-o" aria-hidden="true" style="color: #F40F02;"></i>
+                    </a>
+            </section>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+            <section class="text-center p-2">
+                <h3>Rec Letter</h3><br>
+                    <a href="pdf/recommendation-letter.pdf" target="_blank">
+                        <i class="fa fa-4x fa-file-pdf-o" aria-hidden="true" style="color: #F40F02;"></i>
+                    </a>
+            </section>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+            <section class="text-center p-2">
+                <h3>References</h3><br>
+                    <a href="pdf/references.pdf" target="_blank">
+                        <i class="fa fa-4x fa-file-pdf-o" aria-hidden="true" style="color: #F40F02;"></i>
+                    </a>
+            </section>
+        </div>
+    </div>
+</article>
+```
+
 
 ### Features Left to Implement
 
